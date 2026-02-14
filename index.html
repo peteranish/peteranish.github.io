@@ -500,6 +500,182 @@
             font-weight: bold;
         }
 
+        /* Careers Section */
+        .careers {
+            background: var(--dark-blue);
+            padding: 6rem 2rem;
+        }
+
+        .careers-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .careers-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .careers-intro h2 {
+            margin-bottom: 1rem;
+        }
+
+        .openings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .job-card {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .job-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .job-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .job-badge {
+            display: inline-block;
+            background: rgba(0, 168, 107, 0.1);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .job-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .job-meta-item span {
+            color: var(--accent);
+        }
+
+        .job-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .job-requirements {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-requirements h4 {
+            color: var(--light);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-requirements ul {
+            list-style: none;
+        }
+
+        .job-requirements li {
+            color: var(--gray);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .job-requirements li::before {
+            content: '▸';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .apply-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 168, 107, 0.4);
+        }
+
+        .careers-cta {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--dark);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .careers-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        .careers-cta p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-blue) 100%);
@@ -694,6 +870,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#team">Team</a></li>
+                <li><a href="#careers">Careers</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-toggle" id="mobileToggle">
@@ -857,7 +1034,7 @@
                 <h3>Ms. Mary Prabha Samson S.</h3>
                 <div class="credentials">M.Tech Civil - IIT Madras</div>
                 <p>Senior Civil Engineer with 17+ years of specialized experience in renewable energy projects. Founded Renerbase with a vision to provide quality services and support projects that power the energy transition.</p>
-                <a href="mailto:maryprabha@renerbase.com" class="email">maryprabha@renerbase.com</a>
+                <a href="/cdn-cgi/l/email-protection#d5b8b4a7aca5a7b4b7bdb495a7b0bbb0a7b7b4a6b0fbb6bab8" class="email"><span class="__cf_email__" data-cfemail="f49995868d848695969c95b486919a918696958791da979b99">[email&#160;protected]</span></a>
                 
                 <ul class="experience-list">
                     <li>10 years with DNV GL Energy Certification as Expert for steel and concrete structures</li>
@@ -877,6 +1054,90 @@
         </div>
     </section>
 
+    <!-- Careers Section -->
+    <div class="careers" id="careers">
+        <div class="careers-container">
+            <div class="careers-intro">
+                <h2>Join Our <span class="highlight">Team</span></h2>
+                <p class="section-intro">Be part of the energy transition. We're looking for talented engineers passionate about renewable energy and sustainable infrastructure.</p>
+            </div>
+
+            <div class="openings-grid">
+                <!-- Structural Engineer Position -->
+                <div class="job-card">
+                    <div class="job-badge">Open Position</div>
+                    <h3>Civil Engineer - Structural</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <span>📍</span> Bengaluru, Karnataka
+                        </div>
+                        <div class="job-meta-item">
+                            <span>💼</span> Full Time
+                        </div>
+                        <div class="job-meta-item">
+                            <span>📊</span> Mid to Senior Level
+                        </div>
+                    </div>
+                    <p class="job-description">
+                        We're seeking an experienced Civil Engineer specializing in structural engineering for renewable energy projects. You'll work on WTG foundations, steel towers, substation structures, and other critical infrastructure for wind and solar projects.
+                    </p>
+                    <div class="job-requirements">
+                        <h4>Key Requirements:</h4>
+                        <ul>
+                            <li>B.Tech/M.Tech in Civil Engineering</li>
+                            <li>3-8 years of experience in structural design</li>
+                            <li>Experience with renewable energy projects preferred</li>
+                            <li>Proficiency in structural analysis software (ANSYS, SAP2000, STAAD, RFEM, SAFE)</li>
+                            <li>Knowledge of design codes: IS codes, Eurocodes, ASCE, ACI</li>
+                            <li>Strong analytical and problem-solving skills</li>
+                            <li>Experience with foundation design for towers/turbines is a plus</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:jobs@renerbase.com?subject=Application: Civil Engineer - Structural" class="apply-button">Apply Now</a>
+                </div>
+
+                <!-- Geotechnical Engineer Position -->
+                <div class="job-card">
+                    <div class="job-badge">Open Position</div>
+                    <h3>Civil Engineer - Geotechnical</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <span>📍</span> Bengaluru, Karnataka
+                        </div>
+                        <div class="job-meta-item">
+                            <span>💼</span> Full Time
+                        </div>
+                        <div class="job-meta-item">
+                            <span>📊</span> Mid to Senior Level
+                        </div>
+                    </div>
+                    <p class="job-description">
+                        Join our team as a Geotechnical Engineer working on renewable energy infrastructure. You'll conduct site suitability studies, design ground improvement solutions, and provide geotechnical expertise for wind turbine and solar project foundations.
+                    </p>
+                    <div class="job-requirements">
+                        <h4>Key Requirements:</h4>
+                        <ul>
+                            <li>B.Tech/M.Tech in Civil Engineering with Geotechnical specialization</li>
+                            <li>3-8 years of experience in geotechnical engineering</li>
+                            <li>Experience with site investigation and soil testing</li>
+                            <li>Knowledge of foundation design and ground improvement techniques</li>
+                            <li>Familiarity with geotechnical software (PLAXIS, GeoStudio, SLOPE/W)</li>
+                            <li>Understanding of IS codes and international standards</li>
+                            <li>Experience with wind/solar projects is highly desirable</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:jobs@renerbase.com?subject=Application: Civil Engineer - Geotechnical" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="careers-cta">
+                <h3>Don't see a perfect match?</h3>
+                <p>We're always looking for talented individuals who are passionate about renewable energy. Send us your CV and let us know how you can contribute to our mission.</p>
+                <a href="mailto:jobs@renerbase.com?subject=General Application" class="btn btn-primary">Send Your CV</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <div class="contact" id="contact">
         <div class="contact-container">
@@ -890,8 +1151,8 @@
                     <div class="contact-icon">📧</div>
                     <div class="contact-details">
                         <h3>Email</h3>
-                        <a href="mailto:contact@renerbase.com">contact@renerbase.com</a><br>
-                        <a href="mailto:jobs@renerbase.com">jobs@renerbase.com (Careers)</a>
+                        <a href="/cdn-cgi/l/email-protection#086b67667c696b7c487a6d666d7a6a697b6d266b6765"><span class="__cf_email__" data-cfemail="aecdc1c0dacfcddaeedccbc0cbdccccfddcb80cdc1c3">[email&#160;protected]</span></a><br>
+                        <a href="/cdn-cgi/l/email-protection#2d47424f5e6d5f4843485f4f4c5e48034e4240"><span class="__cf_email__" data-cfemail="cca6a3aebf8cbea9a2a9beaeadbfa9e2afa3a1">[email&#160;protected]</span> (Careers)</a>
                     </div>
                 </div>
 
@@ -940,11 +1201,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Renerbase Consulting Engineers. All rights reserved.</p>
+        <p>&copy; 2026 Renerbase Consulting Engineers. All rights reserved.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">Structures Powering the Energy Transition</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile navigation toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
@@ -990,19 +1251,4 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards
-        document.querySelectorAll('.service-card, .project-card, .team-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
-</body>
-</html>
+                    entry.target.st
